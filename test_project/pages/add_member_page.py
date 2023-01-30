@@ -7,11 +7,11 @@ from test_project.pages.contact_page import ContactPage
 
 
 class AddMemberpage(BasePage):
-    def add_member(self):
-        sleep(3)
-        self.driver.find_element(By.XPATH,'//*[@id="username"]').send_keys('你好1')
-        self.driver.find_element(By.XPATH,'//*[@id="memberAdd_acctid"]').send_keys('2253')
-        self.driver.find_element(By.XPATH,'//*[@id="memberAdd_phone"]').send_keys(13613614531)
+    def add_member(self,username,memberAdd_acctid,memberAdd_phone):
+
+        self.driver.find_element(By.XPATH,'//*[@id="username"]').send_keys(username)
+        self.driver.find_element(By.XPATH,'//*[@id="memberAdd_acctid"]').send_keys(memberAdd_acctid)
+        self.driver.find_element(By.XPATH,'//*[@id="memberAdd_phone"]').send_keys(memberAdd_phone)
         return self
     def save_member(self):
 

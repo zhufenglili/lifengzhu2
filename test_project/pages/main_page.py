@@ -10,6 +10,7 @@ from test_project.pages.contact_page import ContactPage
 
 
 class MainPage(BasePage):
+    base_url = 'https://work.weixin.qq.com/wework_admin/frame#index'
     def go_to_contact(self):
 
         self.driver.find_element(By.CSS_SELECTOR,'[id="menu_contacts"]').click()
